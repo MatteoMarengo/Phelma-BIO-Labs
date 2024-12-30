@@ -1,0 +1,141 @@
+[SF] 1.6.2.3 started at 11:39:34 on 11/21/22
+----------------------------------------------------------------------
+	SpotFinder Performance stats.
+	SpotFinder [DLL] 1.6.2.3 (Dec 19 2007,18:07:39)
+----------------------------------------------------------------------
+	[Images]
+		[Dir]<C:\Documents and Settings\Scanner\Mes documents\Array4D\Projects\DNA Microarray 2022 G2\Matteo-LAM\Results/>
+		[Name]
+		{Resolution} 14.79 µm/pixel
+		{Rotation} 0.10°
+		{Save images} level 3
+	{Gridding} .gal (Fixed), oversampling 1x
+		[Input .gal]	<C:\Documents and Settings\Scanner\Mes documents\Array4D\Projects\DNA Microarray 2022 G2\Matteo-LAM\Results\Matteo-LAM_Slide 1_Pad_0.gal>
+		[Grid] [4x4] radius: 2177 pitch 2073x1969µm shape: 4, elasticity 50%, viscosity 50%
+		[Metagrid] [2,2] pitch 10383x9864µm, offset [10488,9963], shape: 1, elasticity 50%, viscosity 50%
+	[Algorithm Control]
+		{Stain filter} state 0, radius 0
+		{AutoContrast} mode 1
+		{PreFiltering} type 6
+	{Segmentation} BioArray
+		[Contour]	<None>
+		[Regions]	<None>
+		{Quantification} safeguard 2px, radius 150% of spot
+
+		Unloaded 0 optimized IPP functions
+
+[SF] {SpotFinderInit}
+
+[SF] {RotateImage}
+	Rotating image of size 1536x4936px at 0.10° along center (0.00,0.00) [px] ->  1536x4936px
+
+[SF] {RotateImage}
+	Rotating image of size 1536x4936px at 0.10° along center (0.00,0.00) [px] ->  1536x4936px
+	Channels: Cy3: 1, Cy5: 1 (0x3) [Cy 3]+[Cy 5]
+	Image origin is top-left corner
+	[Image size] Original 1536x4936px / 22.7x73.0 mm [Res = 14.79 microns/px]
+	             After 0.10° rotation 1536x4936px / 22.7x73.0 mm
+	{Image allocation}	  0.48s
+	(.gal mode 1) Attempting to interpret spotting scheme from file...
+
+[SF] {ReadGal}
+	.gal file: <C:\Documents and Settings\Scanner\Mes documents\Array4D\Projects\DNA Microarray 2022 G2\Matteo-LAM\Results\Matteo-LAM_Slide 1_Pad_0.gal>
+	.gal type: "Type=GenePix ArrayList V1.0"
+	.gal header specifies 4 blocks
+	[Interpreting URL=http://www.genewave.com]
+	[Interpreting Supplier=Genewave]
+	[Interpreting ArrayerSoftwareName=Array4D]
+	[Interpreting Block1= 1996, 11833, 300, 4, 2073, 4, 2136 ]
+	[Interpreting Block2= 12380, 11833, 300, 4, 2073, 4, 2136 ]
+	[Interpreting Block3= 1996, 22320, 300, 4, 2073, 4, 2136 ]
+	[Interpreting Block4= 12380, 22320, 300, 4, 2073, 4, 2136 ]
+	[Basegrid] [4x4]		pitches [2073,2136], radii [150,150]
+	[Metagrid] [2x2]		pitches [10384,10487], radii [6533,6722]
+		Computing mean positions of metagrid centers
+		xC[ 0][]: [ 5105] [ 5105] -> 5105
+		xC[ 1][]: [15489] [15489] -> 15489
+		----------------------------------------------------
+		yC[][0]: [15037] [15037] -> 15037µm
+		yC[][1]: [25524] [25524] -> 25524µm
+	Orientation: Row/Columns
+	Scanning remaining lines for spot name & ID (nBlocks 4 nSpots 16 (4x4)
+	{End of scan}
+
+
+[SF] {CheckGrid}
+
+[SF] {CheckMetaGrid}
+	 <Grid characteristics>
+	¤ Grid [4x4] pitch (2073, 2136) r 150 shape 4
+	¤ Meta-grid [2x2] pitches (10384, 10487) r (3259, 3354) shape 1
+	{SpotFinderInit}	  0.50s
+
+[SF] {Convert16to8}
+	Channel flag value: 3
+	Overall dynamics: 0 ... 65477
+	Cy3 dynamics: 0 ... 65535
+	Cy5 dynamics: 0 ... 65535
+	{Compute image dynamics}	  0.03s
+	Transforming image using Mean +- Std - mean 320, std 777, max 2654
+	{16 -> 8bit convert}	  0.14s
+	Scale= 10.41, Shift= 0.00
+	{Median filter}	  0.23s
+	{Gridding}
+	Adjusting contrast [Local]
+
+[SF] {AutoCellBrightness}
+	Mode 1
+	{Local contrast adjustment}	  0.30s
+
+[SF] {Segmentation}
+	Processing 64 spots with method [1]: BioArray
+
+[SF] {PreFilter}
+	Pre-filtering with [6]: area opening - 66% of radius 10 px --> area 140px²
+
+[SF] {AreaFilter}
+		Area opening 140 px²
+	{PreFiltering}	  1.58s
+
+[SF] {SegmentBioarray [MultiThread]}
+	(Control Parameters) ImageCombi 0, CyCorr 0, SArea 323px², Type 3 CentersSize 4px, FiltType 0, FiltSize 3px
+	[DLL Path] <C:\Program Files\Amplireader\Array4D 1.02b\Quantification> (57 characters)
+	Loading bioarray ... - DLL Loaded OK
+	Processing 4 blocks in 1 threads...
+ B[ 1] B[ 2]
+ B[ 3] B[ 4]
+
+	Segmentation finished
+	{SegmentationBioarray timing:}	  3.44s
+
+[SF] {WriteSegmentImages}
+
+[SF] {RotateImage}
+	Rotating image of size 1536x4936px at -0.10° along center (0.00,0.00) [px] ->  1536x4936px
+	SaveIplImageAsTiff <C:\Documents and Settings\Scanner\Mes documents\Array4D\Projects\DNA Microarray 2022 G2\Matteo-LAM\Results/Matteo-LAM_Slide 1_Pad_0.gws> - Compression 2
+	SaveIplImageAsTiff <C:\Documents and Settings\Scanner\Mes documents\Array4D\Projects\DNA Microarray 2022 G2\Matteo-LAM\Results/Matteo-LAM_Slide 1_Pad_0.gwc> - Compression 2
+	Segmentation images saved to:
+		Contours <C:\Documents and Settings\Scanner\Mes documents\Array4D\Projects\DNA Microarray 2022 G2\Matteo-LAM\Results/Matteo-LAM_Slide 1_Pad_0.gws>
+		Regions <C:\Documents and Settings\Scanner\Mes documents\Array4D\Projects\DNA Microarray 2022 G2\Matteo-LAM\Results/Matteo-LAM_Slide 1_Pad_0.gwc>
+[SF] {WriteSegmentOverlay}
+
+[SF] {RotateImage}
+	Rotating image of size 1536x4936px at -0.10° along center (0.00,0.00) [px] ->  1536x4936px
+	Segmentation overlay saved to <C:\Documents and Settings\Scanner\Mes documents\Array4D\Projects\DNA Microarray 2022 G2\Matteo-LAM\Results/Matteo-LAM_Slide 1_Pad_0_Segment.jpg> [rcode 1]
+
+	{Segmentation}	  4.55s
+	Average throughput 14.1 spots/sec
+
+[SF] {Quantification}
+[Warning] Background disk ratio increased to 250 %
+		[RGB Image] alignment 4, 3 channels 	origin @ 0px	BitDepth 8	 Color model RGB
+	{Quantification}	  0.52s
+
+[SF] {WriteGpr}
+	{GPR Export}	  0.02s
+
+	Analyzed 64 spots, in 56 .gpr fields
+
+----------------------------------------------------------------------
+         Total execution time:  8.80 seconds
+----------------------------------------------------------------------
